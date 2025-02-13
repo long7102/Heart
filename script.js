@@ -25,15 +25,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  const audio = document.getElementById('bg-music');
-  const button = document.getElementById('toggle-audio');
-
-  button.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play();
-      button.textContent = '🔊';
-    } else {
-      audio.pause();
-      button.textContent = '🔇';
-    }
-  });
