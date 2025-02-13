@@ -75,22 +75,39 @@ canvas {
     justify-content: space-around;
     margin-top: 15px;
   }
-  
   .btn-cancel, .btn-close-modal {
-    padding: 8px 16px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
   }
   
+  /* Nút Hủy */
   .btn-cancel {
-    background: rgb(31, 29, 99);
+    background: linear-gradient(135deg, #1F1D63, #3A37B8);
     color: white;
   }
+  
+  .btn-cancel:hover {
+    background: linear-gradient(135deg, #3A37B8, #1F1D63);
+    transform: scale(1.05);
+  }
+  
+  /* Nút Đóng */
   .btn-close-modal {
-    background: gray;
+    background: linear-gradient(135deg, #d32f2f, #b71c1c); /* Màu đỏ đậm */
     color: white;
   }
+  
+  .btn-close-modal:hover {
+    background: linear-gradient(135deg, #b71c1c, #d32f2f); /* Đảo màu khi hover */
+    transform: scale(1.05);
+  }
+  
   .modal-image{
     width: 200px;
     height: 200px;
