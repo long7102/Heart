@@ -6,52 +6,13 @@
 
   <TITLE> Iu em thư nhìu lắm </TITLE>
   <link rel="shortcut icon" type="image/x-icon" href="./image.png" />
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./styles.css">
   <META NAME="Generator" CONTENT="EditPlus">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <META NAME="Author" CONTENT="">
   <META NAME="Keywords" CONTENT="">
   <META NAME="Description" CONTENT="">
-  <style>
-    html,
-    body {
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      background: #000;
-    }
-
-    canvas {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
-    .text-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 3.0em;
-      font-family: 'Dancing Script', cursive;
-      text-align: center;
-      z-index: 1;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .audio-button {
-      position: fixed;
-      top: 7%;
-      right: 25px;
-      background: #140c30;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1em;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 
 <body>
@@ -59,20 +20,20 @@
   <div class="text-overlay">Anhh Thuw <br> (Bmo)</div>
   <audio id="bg-music" src="./sound.mp3" autoplay loop></audio>
   <button id="toggle-audio" class="audio-button">🔊</button>
-  <script>
-    const audio = document.getElementById('bg-music');
-    const button = document.getElementById('toggle-audio');
 
-    button.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play();
-        button.textContent = '🔊';
-      } else {
-        audio.pause();
-        button.textContent = '🔇';
-      }
-    });
-  </script>
+  <div id="customModal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="close-btn">&times;</span>
+      <img src="./7-1.png" alt="image" class="modal-image"/>
+      <p>Nội dung của modal sẽ xuất hiện ở đây. 😊</p>
+      <div class="modal-actions">
+        <button id="cancelBtn" class="btn-cancel">Em biết rùi</button>
+        <button id="closeModal" class="btn-close-modal"><a href="#">EM NHỚ ANH</a></button>
+      </div>
+    </div>
+  </div>
+
+
   <script>
     /*
    * Settings
