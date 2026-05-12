@@ -3,7 +3,8 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: #000;
+  background: #050d18;
+  overflow: hidden;
 }
 
 canvas {
@@ -14,11 +15,11 @@ canvas {
 
 .text-overlay {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 3.0em;
+  font-size: 2.5em;
   font-family: 'Dancing Script', cursive;
   text-align: center;
   z-index: 1;
