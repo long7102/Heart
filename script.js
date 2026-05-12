@@ -4,24 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var cancelBtn = document.getElementById("cancelBtn");
     var closeModal = document.getElementById("closeModal");
 
-    // Hiển thị modal khi mở trang
     modal.style.display = "flex";
 
-    // Đóng modal khi nhấn vào nút "X", "Hủy", hoặc "Đóng"
     function closeModalFunc() {
-      modal.style.display = "none";
+        if (modal) modal.style.display = "none";
     }
 
-    closeButton.addEventListener("click", closeModalFunc);
-    cancelBtn.addEventListener("click", closeModalFunc);
-    closeModal.addEventListener("click", closeModalFunc);
+    // Dùng kỹ thuật kiểm tra tồn tại (Optional Chaining hoặc If) để không bị crash code
+    if (closeButton) closeButton.addEventListener("click", closeModalFunc);
+    if (cancelBtn) cancelBtn.addEventListener("click", closeModalFunc);
+    if (closeModal) closeModal.addEventListener("click", closeModalFunc);
 
-    // Đóng modal khi click ra ngoài
     window.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        closeModalFunc();
-      }
+        if (event.target === modal) {
+            closeModalFunc();
+        }
     });
-  });
-
-
+});
